@@ -50,10 +50,10 @@ BEGIN
         LOS=LOS+1 
         IF (str[LOS]=" ") THEN
             NOW=NOW+1
-            IF (str[LOS]="aeiouAEIOU") THEN
-                VOW=VOW+1
         END_IF
         LOS:=LOS+1
+        IF (str[LOS]="aeiouAEIOU") THEN
+                VOW=VOW+1
     END_WHILE
     LOS:=LOS+1
     write(LOS)
