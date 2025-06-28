@@ -1,0 +1,63 @@
+// The length of the sentence
+// LOS = variable for Length of Sentence
+// str - variable for string
+// NOW = variable for number of words
+
+ALGORITHM LOS
+VAR
+    LOS:INTEGER=0;
+    str:STRING;
+BEGIN
+    read:(str);
+    WHILE (str[LOS]<>".") DO
+        LOS=LOS+1 
+    END_WHILE
+    LOS:=LOS+1
+    write(LOS)
+END
+
+
+// algorithm telling us the number of characters and number of words in (I AM GROOT)
+ALGORITHM LOS
+VAR
+    LOS:INTEGER=0;
+    str:STRING;
+    NOW:INTEGER=1;
+BEGIN
+    read:(str);
+    WHILE (str[LOS]<>".") DO
+        LOS=LOS+1 
+        IF (str[LOS]=" ") THEN
+            NOW=NOW+1
+        END_IF
+        LOS:=LOS+1
+    END_WHILE
+    LOS:=LOS+1
+    write(LOS)
+END
+
+
+// algorithm telling us the number of characters, vowels and number of words in (I AM GROOT)
+ALGORITHM LOS
+VAR
+    LOS:INTEGER=0;
+    str:STRING;
+    NOW:INTEGER=1;
+    VOW:INTEGER=0;
+BEGIN
+    read:(str);
+    WHILE (str[LOS]<>".") DO
+        LOS=LOS+1 
+        IF (str[LOS]=" ") THEN
+            NOW=NOW+1
+            IF (str[LOS]="aeiouAEIOU") THEN
+                VOW=VOW+1
+        END_IF
+        LOS:=LOS+1
+    END_WHILE
+    LOS:=LOS+1
+    write(LOS)
+    write(NOW)
+    Write(VOW)
+    
+END
