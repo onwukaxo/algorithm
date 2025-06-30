@@ -10,7 +10,7 @@ VAR
 BEGIN
     read:(str);
     WHILE (str[LOS]<>".") DO
-        LOS=LOS+1 
+        LOS:=LOS+1 
     END_WHILE
     LOS:=LOS+1
     write(LOS)
@@ -46,18 +46,22 @@ VAR
     VOW:INTEGER=0;
 BEGIN
     read:(str);
+
     WHILE (str[LOS]<>".") DO
         LOS=LOS+1 
         IF (str[LOS]=" ") THEN
             NOW=NOW+1
+
+        END_IF
+        IF (str[LOS]="a" OR str[LOS]="e" OR str[LOS]="i" OR str[LOS]="o" OR str[LOS]="u" OR str[LOS]="A"
+            OR str[LOS]="E" OR str[LOS]="I" OR str[LOS]="O" OR str[LOS]="U") THEN
+            VOW:=VOW+1
         END_IF
         LOS:=LOS+1
-        IF (str[LOS]="aeiouAEIOU") THEN
-                VOW=VOW+1
+
     END_WHILE
-    LOS:=LOS+1
     write(LOS)
     write(NOW)
     Write(VOW)
-    
 END
+
